@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(circle at 16% 83%, rgba(148, 148, 148,0.06) 0%, rgba(148, 148, 148,0.06) 50%,rgba(63, 63, 63,0.06) 50%, rgba(63, 63, 63,0.06) 100%),radial-gradient(circle at 68% 87%, rgba(66, 66, 66,0.06) 0%, rgba(66, 66, 66,0.06) 50%,rgba(105, 105, 105,0.06) 50%, rgba(105, 105, 105,0.06) 100%),radial-gradient(circle at 38% 50%, rgba(123, 123, 123,0.06) 0%, rgba(123, 123, 123,0.06) 50%,rgba(172, 172, 172,0.06) 50%, rgba(172, 172, 172,0.06) 100%),linear-gradient(90deg, hsl(18,0%,1%),hsl(18,0%,1%));
+}
+
+main {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(22, 22, 22);
+    -webkit-box-shadow:0px 0px 243px 136px rgba(2,105,161,1);
+    -moz-box-shadow: 0px 0px 243px 136px rgba(2,105,161,1);
+    box-shadow: 0px 0px 243px 136px rgba(2,105,161,1);
+    border-radius: 30px;
+}
+
+article, aside, header, nav, footer, .tartalom {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+header {
+    text-align: center; 
+    font-size: 3rem; 
+    color: rgb(255, 255, 255); 
+    text-shadow: 
+        0 0 5px rgba(2, 105, 161, 1),
+        0 0 10px rgba(2, 105, 161, 1),
+        0 0 15px rgba(2, 105, 161, 1),
+        0 0 20px rgba(2, 105, 161, 1),
+        0 0 25px rgba(2, 105, 161, 1),
+        0 0 30px rgba(2, 105, 161, 1);
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    color: #ffffff;
+    background: #09ac5d;
+    border: 1px solid #06e077;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #09ac5d, 0 0 20px #09ac5d, 0 0 50px #09ac5d, 0 0 100px #09ac5d;
+    
+  }
+  
+a:hover,
+:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+  
+
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "h h"
+        "n n"
+        "a as"
+        "f f";
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+article {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+h2 {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+p {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+img {
+    width: 100%;
+    justify-content: center;
+}
+
+h2 {
+
+    text-align: center;
+}
+aside {
+    grid-area: as;
+}
+
+footer {
+    grid-area: f;
+    text-align: center; 
+    color: rgb(255, 255, 255); /* Alap szín */
+    text-shadow: 
+        0 0 5px rgba(2, 105, 161, 1),  /* Világító hatás */
+        0 0 10px rgba(2, 105, 161, 1),
+        0 0 15px rgba(2, 105, 161, 1),
+        0 0 20px rgba(2, 105, 161, 1),
+        0 0 25px rgba(2, 105, 161, 1),
+        0 0 30px rgba(2, 105, 161, 1);
+    font-weight: bold; /* Erősebb megjelenés */
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        display: grid;
+        grid-template-areas: 
+            "h"
+            "n"
+            "as"
+            "a"
+            "f";
+    }
+    
+    article {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "h h"
+        "n n"
+        "a as"
+        "f f";
+    width: 100%; /* Dinamikus szélesség */
+    margin: auto;
+}
+
+.tartalom{
+    background-color: rgb(26, 26, 26);
+    border-radius: 15px;
+}
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+article {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+aside {
+    grid-area: as;
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;  
+    float: right;
+  }
+  
+  .button .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+  
+  .button svg path {
+    transition: 400ms;
+  }
+  
+  .button:hover {
+    background-color: transparent;
+  }
+  
+  .button:hover .text {
+    color: #00b7ff;
+  }
+  
+  .button:hover svg path {
+    fill: #00b7ff;
+  }
+
+footer {
+    grid-area: f;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        0 0 5px rgba(2, 105, 161, 1),
+        0 0 10px rgba(2, 105, 161, 1),
+        0 0 15px rgba(2, 105, 161, 1),
+        0 0 20px rgba(2, 105, 161, 1),
+        0 0 25px rgba(2, 105, 161, 1),
+        0 0 30px rgba(2, 105, 161, 1);
+    font-weight: bold;
+}
+
+/* Reszponzív szabályok mobil eszközökre */
+@media screen and (max-width: 1200px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    article {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    main {
+        grid-template-areas: 
+            "h"
+            "n"
+            "as"
+            "a"
+            "f";
+    }
+    
+    article {
+        grid-template-columns: 1fr;
+    }
+    
+    footer {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+    
+    main {
+        grid-template-areas: 
+            "h"
+            "n"
+            "as"
+            "a"
+            "f";
+    }
+    
+    article {
+        grid-template-columns: 1fr;
+    }
+    
+    footer {
+        text-align: left; 
+    }
+}
